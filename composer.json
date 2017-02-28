@@ -3,5 +3,8 @@
     "description": "Global ID API for PHP",
     "autoload": {
         "classmap": ["lib"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "<6.0"
     }
 }
