@@ -1,0 +1,7 @@
+{
+    "name": "torchlighttechnology/glid-php-api",
+    "description": "Global ID API for PHP",
+    "autoload": {
+        "classmap": ["lib"]
+    }
+}
