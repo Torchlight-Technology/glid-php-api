@@ -116,22 +116,24 @@ class GlobalIdAPITest extends TestCase {
 
 	public function actionProvider() {
 		return [
-			['9192550928', 'data', 'cost', '', '1488311258', '2.50', 99, 10, 'auto', null, 'pingtree'],
-			['9192550928', 'data', 'revenue', '', '1488311258', '3.50', 99, 10, 'auto', null, 'pingtree']
+			['4102341299', 'data', 'cost', 'ag101@rida.com', '1488311258', '2.50', 99, 10, 'auto', null, 'pingtree'],
+			['4102341299', 'data', 'revenue', 'ag101@rida.com', '1488311258', '3.50', 99, 10, 'auto', null, 'pingtree'],
+			['4102341297', 'data', 'cost', 'ag102@rida.com', '1488311260', '2.50', 99, 10, 'auto', null, 'pingtree'],
+			['4102341297', 'data', 'revenue', 'ag102@rida.com', '1488311260', '3.50', 99, 10, 'auto', null, 'pingtree']
 		];
 	}
 
 	public function phoneProvider() {
 		return [
-			['9192550928', 'b6dba49f5562f833951b59291a4db463'],
-			['7142623064', 'c68513ba037a806a8e159a41a39e055b']
+			['4102341299', '3692acaa30028857d8420bbc1775ae14'],
+			['4102341297', 'c1e74bf5ed82ee62f1dcf9f4980f77ec']
 		];
 	}
 
 	public function emailProvider() {
 		return [
-			['loverodney91@gmail.com', 'b6dba49f5562f833951b59291a4db463'],
-			['kjsyed42@yahoo.com', 'c68513ba037a806a8e159a41a39e055b']
+			['ag101@rida.com', '3692acaa30028857d8420bbc1775ae14'],
+			['ag102@rida.com', 'c1e74bf5ed82ee62f1dcf9f4980f77ec']
 		];
 	}
 }

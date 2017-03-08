@@ -26,10 +26,10 @@ class GlobalIdAPI
 	 */
 	public function email_lookup($email)
 	{
-		$request = [
+		$request = array(
 			'request' => 'email_lookup',
 			'email' => $email
-		];
+		);
 		return $this->api_request($request);
 	}
 
@@ -40,10 +40,10 @@ class GlobalIdAPI
 	 */
 	public function hash_lookup($phone)
 	{
-		$request = [
+		$request = array(
 			'request' => 'hash_lookup',
 			'phone' => $phone
-		];
+		);
 		return $this->api_request($request);
 	}
 
@@ -54,10 +54,10 @@ class GlobalIdAPI
 	 */
 	public function last_action($phone)
 	{
-		$request = [
+		$request = array(
 			'request' => 'last_action',
 			'phone' => $phone
-		];
+		);
 		return $this->api_request($request);
 	}
 
@@ -68,10 +68,10 @@ class GlobalIdAPI
 	 */
 	public function history($phone)
 	{
-		$request = [
+		$request = array(
 			'request' => 'history',
 			'phone' => $phone
-		];
+		);
 		return $this->api_request($request);
 	}
 
@@ -82,7 +82,7 @@ class GlobalIdAPI
 	 */
 	public function do_action($request) {
 
-		$request += ['request' => 'do_action'];
+		$request += array('request' => 'do_action');
 
 		return $this->api_request($request);
 	}
