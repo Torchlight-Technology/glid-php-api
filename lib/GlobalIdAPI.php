@@ -34,6 +34,20 @@ class GlobalIdAPI
 	}
 
 	/**
+	 * Lookup Phone by Email
+	 *
+	 * @return array API response object.
+	 */
+	public function phone_lookup_by_email($email)
+	{
+		$request = array(
+			'request' => 'phone_lookup',
+			'email' => $email
+		);
+		return $this->api_request($request);
+	}
+
+	/**
 	 * Lookup Hash
 	 *
 	 * @return array API response object.
