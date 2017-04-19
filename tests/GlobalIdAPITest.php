@@ -29,6 +29,22 @@ class GlobalIdAPITest extends TestCase {
 	}
 
 	/**
+	* @dataProvider phoneEmailProvider
+	*/
+	public function testPhoneLookupByEmail($email, $expectedPhone) {
+		$this->mysetup();
+
+		$results = $this->GlidAPI->phone_lookup_by_email($email);
+
+		// Status is good
+		$this->assertEquals('ok', $results->status);
+
+		// Hash matches
+		$this->assertEquals($expectedPhone, $results->phone);
+
+	}
+
+	/**
 	* @dataProvider phoneProvider
 	*/
 	public function testHashLookup($phone, $expectedHash){
@@ -134,6 +150,13 @@ class GlobalIdAPITest extends TestCase {
 		return [
 			['ag101@rida.com', '3692acaa30028857d8420bbc1775ae14'],
 			['ag102@rida.com', 'c1e74bf5ed82ee62f1dcf9f4980f77ec']
+		];
+	}
+
+	public function phoneEmailProvider() {
+		return [
+			['ag101@rida.com', '4102341299'],
+			['ag102@rida.com', '4102341297']
 		];
 	}
 }
