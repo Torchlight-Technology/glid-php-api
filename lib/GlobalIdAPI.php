@@ -2,7 +2,7 @@
 
 namespace torchlighttechnology\glid;
 
-use APIError;
+use torchlighttechnology\glid\APIError;
 
 /**
  * TTG Global ID PHP client

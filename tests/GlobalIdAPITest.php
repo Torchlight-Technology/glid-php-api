@@ -11,6 +11,19 @@ class GlobalIdAPITest extends TestCase {
 		$host = 'https://api.torchlighttechnology.com/glid/staging';
 		$this->GlidAPI = new GlobalIdAPI($host);
 	}
+
+	/**
+	* @dataProvider emailProvider
+	*/
+	public function testBadURL($email, $expectedHash) {
+		$this->GlidAPI = new GlobalIdAPI('https://api.torchlighttechnology.com/glidyyy/taging');
+
+		$results = $this->GlidAPI->email_lookup($email);
+
+		// Status is good
+		$this->assertEquals('error', $results->status);
+		$this->assertEquals('403', $results->code);
+	}
 	
 	/**
 	* @dataProvider emailProvider
