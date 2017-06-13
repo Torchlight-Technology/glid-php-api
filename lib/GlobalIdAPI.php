@@ -118,9 +118,9 @@ class GlobalIdAPI
 			$response = json_decode($result);
 
 			if ($code != 200) {
-				throw new API_Error('Request was not successful', $code, $result, $response);
+				throw new APIError('Request was not successful', $code, $result, $response);
 			}
-		} catch (API_Error $e) {
+		} catch (APIError $e) {
 			$response = (object) array(
 				'code' => $code,
 				'status' => 'error',
